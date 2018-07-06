@@ -1,0 +1,22 @@
+typedef char stack_type;
+typedef struct {
+    stack_type data[10000];
+    int top;
+}stack;
+void init(stack *s)
+{
+    s->top=0;
+}
+void push(stack *s,stack_type item)
+{
+    s->data[s->top]=item;
+    
+}
+stack_type pop(stack *s)
+{
+    return s->data[--(s->top)];
+}
+stack_type peek(stack *s,stack)
+{
+    return s->data[s->top-1];
+}
